@@ -19,7 +19,7 @@ public class AppleService {
 		if(numberOfApples > MAX_APPLE_LOT){
 			throw new NoAppleException();
 		}
-		final List<Apple> apples = new ArrayList<Apple>();
+		final List<Apple> apples = new ArrayList<>();
 		for(int i = 0; i < numberOfApples; i++){
 			final Apple apple = new Apple();
 			apples.add(apple);

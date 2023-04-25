@@ -2,9 +2,9 @@ package dev.aliaga.unit.under.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Properties;
 
 import org.junit.BeforeClass;
@@ -17,7 +17,7 @@ public class PropertyLoaderTest {
 	@BeforeClass
 	public static void initPropertyFile() throws IOException{
 		properties = new Properties();
-		properties.load(new FileInputStream(new File("src/test/resources/test.properties")));
+		properties.load(Files.newInputStream(Path.of("src/test/resources/test.properties")));
 	}
 	
 	@Test
